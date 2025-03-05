@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizli Bilgi</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #secret { display: none; color: red; font-size: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Şifreyi Girin</h2>
+    <input type="password" id="password" placeholder="Şifre">
+    <button onclick="checkPassword()">Giriş</button>
+
+    <p id="secret">Ozan, daha önce İrem'e tecavüz etmeye çalıştı. Ancak, İrem onu polise şikayet etmek ile tehdit edince, ona karşı büyük bir kin besledi.</p>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "1998") { // Burada kendi şifreni belirledim
+                document.getElementById("secret").style.display = "block";
+            } else {
+                alert("Yanlış şifre!");
+            }
+        }
+    </script>
+
+</body>
+</html>
